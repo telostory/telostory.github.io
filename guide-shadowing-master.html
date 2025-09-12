@@ -18,6 +18,10 @@
       .backbtn { color: var(--muted); text-decoration: none; }
       .backbtn:hover { color: var(--text); }
       .toc { margin: 12px 0 24px; padding: 12px; border: 1px dashed var(--border); border-radius: 10px; background: rgba(255,255,255,0.03); color: var(--muted); }
+      .apphead { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); }
+      .apphead-inner { display: flex; align-items: center; gap: 14px; padding: 16px 0; }
+      .apphead-icon { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; }
+      .apphead-title { margin: 0; font-size: 20px; }
     </style>
   </head>
   <body>
@@ -26,6 +30,16 @@
     <div class="backbar">
       <div class="container backbar-inner">
         <a class="backbtn" href="./index.html">← Back</a>
+      </div>
+    </div>
+
+    <div class="apphead">
+      <div class="container apphead-inner">
+        <img class="apphead-icon" src="./assets/shadowing-mastger-icon.png" alt="Shadowing Master icon" />
+        <div>
+          <h1 class="apphead-title">Shadowing Master</h1>
+          <div class="badges"><span class="badge">iPhone</span><span class="badge">iPad</span></div>
+        </div>
       </div>
     </div>
 

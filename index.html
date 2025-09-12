@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>telosoft</title>
+    <meta name="description" content="telosoft" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="./" class="brand">telosoft</a>
+        <nav class="nav">
+          <a class="nav-link" href="https://github.com/telostory" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1 class="brandmark">telosoft</h1>
+          <p class="tagline">Builds small, fast, and useful tools that people actually use.</p>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="container">
+          <div class="cards">
+            <article class="card">
+              <div class="card-media">
+                <img src="./assets/shadowing-mastger-icon.png" alt="Shadowing Master icon" class="card-media-img" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3 class="card-title">Shadowing Master</h3>
+                  <div class="badges" role="list"><span class="badge" role="listitem">iPhone</span><span class="badge" role="listitem">iPad</span></div>
+                </div>
+                <p class="card-desc">The ultimate shadowing practice app for language learning. Combines source audio and your voice into a single file for easy submission.</p>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://apps.apple.com/kr/app/%EC%89%90%EB%8F%84%EC%9E%89%EB%A7%88%EC%8A%A4%ED%84%B0/id6751806807" target="_blank" rel="noreferrer">App Store</a>
+                  <a class="btn secondary" href="./guide-shadowing-master.html">About</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> telosoft</div>
+      </div>
+    </footer>
+    <script>
+      const yEl = document.getElementById('year');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

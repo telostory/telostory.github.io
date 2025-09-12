@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shadowing Master — Guide · Privacy</title>
+    <meta name="description" content="Shadowing Master guide and privacy policy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .md { max-width: 800px; margin: 0 auto; }
+      .md h1, .md h2, .md h3 { margin-top: 24px; }
+      .md a { color: var(--brand); }
+      .backbar { border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2); }
+      .backbar-inner { height: 48px; display: flex; align-items: center; gap: 10px; }
+      .backbtn { color: var(--muted); text-decoration: none; }
+      .backbtn:hover { color: var(--text); }
+      .toc { margin: 12px 0 24px; padding: 12px; border: 1px dashed var(--border); border-radius: 10px; background: rgba(255,255,255,0.03); color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="./index.html" class="brand">telosoft</a>
+        <nav class="nav">
+          <a class="nav-link" href="https://github.com/telostory/developer" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="nav-link" href="mailto:telostory@gmail.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="backbar">
+      <div class="container backbar-inner">
+        <a class="backbtn" href="./index.html">← Back</a>
+      </div>
+    </div>
+
+    <main class="container">
+      <article class="md">
+        <h1><strong>📖 About the App</strong></h1>
+        <p><strong>Shadowing Master</strong> is an English learning tool that lets you import original audio files, listen and repeat, and record your shadowing practice.</p>
+        <p>Recordings are organized by date, helping you build a consistent learning habit.</p>
+        <hr />
+        <h2><strong>❓ FAQ</strong></h2>
+        <p><strong>Q. What audio formats are supported?</strong></p>
+        <p>A. MP3, MP4, WAV, AIFF, and CAF are supported.</p>
+        <p><strong>Q. Where are my recordings stored?</strong></p>
+        <p>A. All recordings are stored only on your device and are never sent to a server.</p>
+        <p><strong>Q. Do I need an internet connection?</strong></p>
+        <p>A. Only when importing original audio files from the cloud. After that, you can practice offline.</p>
+        <hr />
+        <h2><strong>📬 Contact</strong></h2>
+        <p>For support or feedback, please contact us at:</p>
+        <p>👉 <strong><a href="mailto:telostory@gmail.com">telostory@gmail.com</a></strong></p>
+        <hr />
+        <h2><strong>🔒 Privacy Policy</strong></h2>
+        <p>Shadowing Master does not collect or store any personal information.</p>
+        <ul>
+          <li>No account or login is required.</li>
+          <li>All recordings remain on your device only.</li>
+          <li>Nothing is uploaded to any server or shared externally.</li>
+        </ul>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> telosoft</div>
+      </div>
+    </footer>
+    <script>
+      const yEl = document.getElementById('year');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

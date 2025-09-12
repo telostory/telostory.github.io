@@ -78,6 +78,9 @@ body {
   border-radius: 999px;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 1px 1px rgba(0,0,0,0.25);
 }
+/* guide page app header */
+.apphead-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 0; }
+.apphead-left { display: flex; align-items: center; gap: 12px; padding-left: 8px; }
 .card-desc { margin: 0 0 12px; color: var(--muted); line-height: 1.5; }
 .card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .btn { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); color: var(--text); text-decoration: none; background: #141823; line-height: 1; display: inline-flex; align-items: center; gap: 8px; }

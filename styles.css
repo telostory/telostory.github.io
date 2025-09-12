@@ -1,3 +1,5 @@
+.backbar .container { padding: 0 16px; }
+.apphead .container { padding: 0 16px; }
 :root {
   --bg: #0b0c10;
   --panel: #11131a;
@@ -80,7 +82,7 @@ body {
 }
 /* guide page app header */
 .apphead-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 0; }
-.apphead-left { display: flex; align-items: center; gap: 12px; padding-left: 8px; }
+.apphead-left { display: flex; align-items: center; gap: 12px; }
 .card-desc { margin: 0 0 12px; color: var(--muted); line-height: 1.5; }
 .card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .btn { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); color: var(--text); text-decoration: none; background: #141823; line-height: 1; display: inline-flex; align-items: center; gap: 8px; }

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Focus Reader — About · Privacy</title>
+    <meta name="description" content="Focus Reader 소개 및 개인정보처리방침" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .md { max-width: 860px; margin: 0 auto; }
+      .md h1, .md h2, .md h3 { margin-top: 24px; }
+      .md a { color: var(--brand); }
+      .backbar { border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2); }
+      .backbar-inner { height: 48px; display: flex; align-items: center; gap: 10px; }
+      .backbtn { color: var(--muted); text-decoration: none; }
+      .backbtn:hover { color: var(--text); }
+      .apphead { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); }
+      .apphead-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 0; }
+      .apphead-left { display: flex; align-items: center; gap: 12px; }
+      .apphead-icon { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; background: #0b0c10; }
+      .apphead-title { margin: 0; font-size: 20px; }
+      .pill { display: inline-flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+      .pill .btn { margin-left: 0; }
+      .callout { margin: 14px 0 18px; padding: 12px; border: 1px dashed var(--border); border-radius: 10px; background: rgba(255,255,255,0.03); color: var(--muted); }
+      .muted { color: var(--muted); }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    </style>
+  </head>
+  <body>
+    <div class="backbar">
+      <div class="container backbar-inner">
+        <a class="backbtn" href="./index.html">← Back</a>
+      </div>
+    </div>
+
+    <div class="apphead">
+      <div class="container apphead-inner">
+        <div class="apphead-left">
+          <img class="apphead-icon" src="./assets/focus-reader-icon.png" alt="Focus Reader icon" />
+          <div>
+            <h1 class="apphead-title">Focus Reader</h1>
+            <div class="badges">
+              <span class="badge">Chrome Extension</span>
+              <span class="badge">Reading</span>
+              <span class="badge">AI (Optional)</span>
+            </div>
+          </div>
+        </div>
+        <div class="pill">
+          <!-- TODO: 실제 크롬 웹스토어 링크로 교체 -->
+          <a class="btn primary" href="#" target="_blank" rel="noreferrer">Chrome Web Store</a>
+          <!-- TODO: 필요 시 프로젝트 소개/소스 링크로 교체 -->
+          <a class="btn secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <article class="md">
+        <h1><strong>📖 Focus Reader 소개</strong></h1>
+        <p><strong>Focus Reader</strong>는 웹페이지의 글을 <strong>단락/섹션 단위로 단계적으로 읽도록</strong> 도와주는 Chrome 확장 프로그램입니다.</p>
+        <ul>
+          <li>긴 글을 읽기 좋은 <strong>작은 단위</strong>로 나눠 흐름을 유지</li>
+          <li>중요 문장을 <strong>강조</strong>하고 맥락을 잃지 않도록 지원</li>
+          <li>원할 때만, 조건을 만족하는 경우에 한해 <strong>AI 읽기 가이드</strong> 제공</li>
+        </ul>
+
+        <div class="callout">
+          <div><strong>AI 기능은 선택 사항</strong>이며, 설정에서 끌 수 있습니다.</div>
+          <div class="muted">아래 개인정보처리방침에 “언제/무엇을 전송하는지”가 자세히 설명되어 있습니다.</div>
+        </div>
+
+        <hr />
+
+        <h2><strong>🔒 개인정보처리방침 (Privacy Policy)</strong></h2>
+        <p class="muted">최종 업데이트: 2025-12-20</p>
+        <p>본 문서는 Chrome 확장 프로그램 <strong>Focus Reader</strong>(이하 “본 확장”)의 개인정보 처리 및 데이터 사용 방식을 설명합니다.</p>
+
+        <h3><strong>1) 본 확장이 하는 일</strong></h3>
+        <ul>
+          <li>웹페이지의 문서를 <strong>단락/섹션 단위로 단계적으로 읽도록</strong> 돕습니다.</li>
+          <li>선택적으로, 특정 조건에서 <strong>AI 읽기 가이드</strong>를 제공합니다.</li>
+        </ul>
+
+        <h3><strong>2) AI 읽기 가이드에서 전송되는 데이터(언제/무엇을)</strong></h3>
+        <p>본 확장은 다음 조건을 만족하는 경우에만 AI 요청을 전송합니다.</p>
+        <ul>
+          <li><strong>300자 이상인 단락(테이블 행 제외)</strong>, 또는</li>
+          <li><strong>테이블 헤더로 표시된 행</strong>(해당 테이블을 이해하기 위한 텍스트 직렬화)</li>
+        </ul>
+        <p>전송되는 데이터의 범위는 다음과 같습니다.</p>
+        <ul>
+          <li>
+            <strong>텍스트 콘텐츠(일부)</strong>: 해당 단락/테이블을 이해하기 위한 텍스트(길이 제한 적용)
+            <ul>
+              <li>일반 단락: 최대 약 <strong>5,000자</strong>(초과분은 잘라냄)</li>
+              <li>테이블: caption/thead/tbody 일부를 포함하여 최대 약 <strong>8,000자</strong>, 최대 <strong>60행</strong>(초과분은 잘라냄)</li>
+            </ul>
+          </li>
+          <li><strong>언어 정보</strong>: 브라우저 언어 코드 및 표시용 언어 이름 (예: <code>ko-KR</code>, <code>한국어</code>)</li>
+        </ul>
+
+        <h3><strong>3) 데이터가 전달되는 곳(수신자)</strong></h3>
+        <p>AI 읽기 가이드는 다음 경로로 처리됩니다.</p>
+        <ul>
+          <li>본 확장 → 본 서비스의 API(예: Vercel Serverless Function) → <strong>Anthropic</strong>(Claude) → 본 서비스의 API → 본 확장</li>
+        </ul>
+
+        <h3><strong>4) 저장/보관(얼마나)</strong></h3>
+        <ul>
+          <li>
+            AI 요청/응답은 <strong>현재 페이지 세션 동안에만 메모리(in-memory)에 임시 보관</strong>될 수 있으며,
+            <ul>
+              <li>페이지를 새로고침하거나,</li>
+              <li>페이지를 떠나거나,</li>
+              <li>확장을 비활성화하면</li>
+            </ul>
+            더 이상 유지되지 않습니다.
+          </li>
+          <li>본 확장은 AI 응답을 <strong>영구 저장(디스크/클라우드)하지 않습니다.</strong></li>
+        </ul>
+
+        <h3><strong>5) 수집하지 않는 것</strong></h3>
+        <ul>
+          <li>본 확장은 사용자의 <strong>이름, 이메일, 계정 정보</strong>를 요구하지 않습니다.</li>
+          <li>본 확장은 사용자의 페이지 내용을 “항상/전체” 전송하지 않습니다. (위의 조건을 만족하는 일부 텍스트만 전송)</li>
+        </ul>
+
+        <h3><strong>6) 사용자 선택(제어)</strong></h3>
+        <p>본 확장은 설정에서 다음을 끌 수 있습니다.</p>
+        <ul>
+          <li><strong>긴 글에 대한 AI 읽기 가이드</strong></li>
+          <li><strong>표에 대한 AI 읽기 가이드</strong></li>
+        </ul>
+
+        <h3><strong>7) 문의</strong></h3>
+        <p>개인정보 관련 문의는 스토어 등록 정보의 지원 이메일로 연락해 주세요.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> telosoft</div>
+        <div class="nav"><a class="nav-link" href="https://github.com/telostory" target="_blank" rel="noreferrer">GitHub</a></div>
+      </div>
+    </footer>
+    <script>
+      const yEl = document.getElementById('year');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
+

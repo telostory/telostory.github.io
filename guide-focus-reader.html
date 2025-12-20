@@ -75,69 +75,68 @@
 
         <hr />
 
-        <h2><strong>🔒 개인정보처리방침 (Privacy Policy)</strong></h2>
-        <p class="muted">최종 업데이트: 2025-12-20</p>
-        <p>본 문서는 Chrome 확장 프로그램 <strong>Focus Reader</strong>(이하 “본 확장”)의 개인정보 처리 및 데이터 사용 방식을 설명합니다.</p>
+        <h2><strong>🔒 Privacy Policy</strong></h2>
+        <p class="muted">Last updated: 2025-12-20</p>
+        <p>This document explains how the Chrome extension <strong>Focus Reader</strong> (“the Extension”) handles personal data and uses page content.</p>
 
-        <h3><strong>1) 본 확장이 하는 일</strong></h3>
+        <h3><strong>1) What the Extension does</strong></h3>
         <ul>
-          <li>웹페이지의 문서를 <strong>단락/섹션 단위로 단계적으로 읽도록</strong> 돕습니다.</li>
-          <li>선택적으로, 특정 조건에서 <strong>AI 읽기 가이드</strong>를 제공합니다.</li>
+          <li>Helps you read web documents <strong>step by step</strong> in <strong>paragraph/section units</strong>.</li>
+          <li>Optionally provides an <strong>AI Reading Guide</strong> under certain conditions.</li>
         </ul>
 
-        <h3><strong>2) AI 읽기 가이드에서 전송되는 데이터(언제/무엇을)</strong></h3>
-        <p>본 확장은 다음 조건을 만족하는 경우에만 AI 요청을 전송합니다.</p>
+        <h3><strong>2) Data sent for the AI Reading Guide (when/what)</strong></h3>
+        <p>The Extension sends an AI request only when one of the following conditions is met:</p>
         <ul>
-          <li><strong>300자 이상인 단락(테이블 행 제외)</strong>, 또는</li>
-          <li><strong>테이블 헤더로 표시된 행</strong>(해당 테이블을 이해하기 위한 텍스트 직렬화)</li>
+          <li>A <strong>paragraph with 300+ characters</strong> (excluding table rows), or</li>
+          <li>A row marked as a <strong>table header</strong> (text is serialized to understand the table).</li>
         </ul>
-        <p>전송되는 데이터의 범위는 다음과 같습니다.</p>
-        <ul>
-          <li>
-            <strong>텍스트 콘텐츠(일부)</strong>: 해당 단락/테이블을 이해하기 위한 텍스트(길이 제한 적용)
-            <ul>
-              <li>일반 단락: 최대 약 <strong>5,000자</strong>(초과분은 잘라냄)</li>
-              <li>테이블: caption/thead/tbody 일부를 포함하여 최대 약 <strong>8,000자</strong>, 최대 <strong>60행</strong>(초과분은 잘라냄)</li>
-            </ul>
-          </li>
-          <li><strong>언어 정보</strong>: 브라우저 언어 코드 및 표시용 언어 이름 (예: <code>ko-KR</code>, <code>한국어</code>)</li>
-        </ul>
-
-        <h3><strong>3) 데이터가 전달되는 곳(수신자)</strong></h3>
-        <p>AI 읽기 가이드는 다음 경로로 처리됩니다.</p>
-        <ul>
-          <li>본 확장 → 본 서비스의 API(예: Vercel Serverless Function) → <strong>Anthropic</strong>(Claude) → 본 서비스의 API → 본 확장</li>
-        </ul>
-
-        <h3><strong>4) 저장/보관(얼마나)</strong></h3>
+        <p>The scope of data sent is:</p>
         <ul>
           <li>
-            AI 요청/응답은 <strong>현재 페이지 세션 동안에만 메모리(in-memory)에 임시 보관</strong>될 수 있으며,
+            <strong>Text content (partial)</strong>: text necessary to understand the paragraph/table (with limits)
             <ul>
-              <li>페이지를 새로고침하거나,</li>
-              <li>페이지를 떠나거나,</li>
-              <li>확장을 비활성화하면</li>
+              <li>Normal paragraph: up to about <strong>5,000 characters</strong> (excess is truncated)</li>
+              <li>Tables: up to about <strong>8,000 characters</strong> including parts of caption/thead/tbody, up to <strong>60 rows</strong> (excess is truncated)</li>
             </ul>
-            더 이상 유지되지 않습니다.
           </li>
-          <li>본 확장은 AI 응답을 <strong>영구 저장(디스크/클라우드)하지 않습니다.</strong></li>
+          <li><strong>Language info</strong>: browser language code and display language name (e.g. <code>ko-KR</code>, <code>한국어</code>)</li>
         </ul>
 
-        <h3><strong>5) 수집하지 않는 것</strong></h3>
+        <h3><strong>3) Where data goes (recipients)</strong></h3>
+        <p>The AI Reading Guide is processed through the following path:</p>
         <ul>
-          <li>본 확장은 사용자의 <strong>이름, 이메일, 계정 정보</strong>를 요구하지 않습니다.</li>
-          <li>본 확장은 사용자의 페이지 내용을 “항상/전체” 전송하지 않습니다. (위의 조건을 만족하는 일부 텍스트만 전송)</li>
+          <li>The Extension → our API (e.g., Vercel Serverless Function) → <strong>Anthropic</strong> (Claude) → our API → the Extension</li>
         </ul>
 
-        <h3><strong>6) 사용자 선택(제어)</strong></h3>
-        <p>본 확장은 설정에서 다음을 끌 수 있습니다.</p>
+        <h3><strong>4) Storage/retention (how long)</strong></h3>
         <ul>
-          <li><strong>긴 글에 대한 AI 읽기 가이드</strong></li>
-          <li><strong>표에 대한 AI 읽기 가이드</strong></li>
+          <li>
+            AI requests/responses may be temporarily kept <strong>in memory (in-memory) only during the current page session</strong>. They are no longer retained when you:
+            <ul>
+              <li>refresh the page,</li>
+              <li>leave the page, or</li>
+              <li>disable the extension.</li>
+            </ul>
+          </li>
+          <li>The Extension does <strong>not</strong> permanently store AI responses (disk/cloud).</li>
         </ul>
 
-        <h3><strong>7) 문의</strong></h3>
-        <p>개인정보 관련 문의는 스토어 등록 정보의 지원 이메일로 연락해 주세요.</p>
+        <h3><strong>5) What we do not collect</strong></h3>
+        <ul>
+          <li>The Extension does not request your <strong>name, email, or account information</strong>.</li>
+          <li>The Extension does not “always/send everything” from a page. Only limited text that meets the conditions above is sent.</li>
+        </ul>
+
+        <h3><strong>6) User choices (controls)</strong></h3>
+        <p>You can turn off the following in settings:</p>
+        <ul>
+          <li><strong>AI Reading Guide for long text</strong></li>
+          <li><strong>AI Reading Guide for tables</strong></li>
+        </ul>
+
+        <h3><strong>7) Contact</strong></h3>
+        <p>For privacy-related inquiries, please contact the support email listed in the store listing.</p>
       </article>
     </main>
 

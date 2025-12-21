@@ -99,6 +99,12 @@ body {
 .site-footer { border-top: 1px solid var(--border); padding: 14px 0; background: rgba(0,0,0,0.2); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 
+/* Guide pages: reduce overall font weight (avoid overly bold headings/strong) */
+.md { font-weight: 400; }
+.md h1, .md h2, .md h3 { font-weight: 500; }
+.md strong { font-weight: 500; }
+.md h1 strong, .md h2 strong, .md h3 strong { font-weight: inherit; }
+
 @media (max-width: 600px) {
   .title { font-size: 28px; }
   .card { flex-direction: row; }

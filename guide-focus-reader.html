@@ -83,30 +83,26 @@
           <li>Optionally provides an <strong>AI Reading Guide</strong> under certain conditions.</li>
         </ul>
 
-        <h3><strong>2) Data sent for the AI Reading Guide (when/what)</strong></h3>
-        <p>The Extension sends an AI request only when one of the following conditions is met:</p>
-        <ul>
-          <li>A <strong>paragraph with 300+ characters</strong> (excluding table rows), or</li>
-          <li>A row marked as a <strong>table header</strong> (text is serialized to understand the table).</li>
-        </ul>
+        <h3><strong>2) Data sent for the Page Reading Guide (when/what)</strong></h3>
+        <p>The Extension sends an AI request only when the optional <strong>Page Reading Guide (AI summary)</strong> feature is enabled and the current page has sufficient extracted main text (e.g., approximately <strong>2,000+ characters</strong>).</p>
+        
         <p>The scope of data sent is:</p>
         <ul>
           <li>
-            <strong>Text content (partial)</strong>: text necessary to understand the paragraph/table (with limits)
+            <strong>Extracted page text (partial)</strong>: the minimum main text needed to generate the summary, with limits applied
             <ul>
-              <li>Normal paragraph: up to about <strong>5,000 characters</strong> (excess is truncated)</li>
-              <li>Tables: up to about <strong>8,000 characters</strong> including parts of caption/thead/tbody, up to <strong>60 rows</strong> (excess is truncated)</li>
+              <li>Page Reading Guide (AI summary): up to about <strong>28,000 characters</strong> (excess is truncated)</li>
             </ul>
           </li>
-          <li><strong>Language info</strong>: browser language code and display language name (e.g. <code>ko-KR</code>, <code>한국어</code>)</li>
+          <li><strong>Language info</strong>: browser language code and display language name (e.g., <code>ko-KR</code>, <code>한국어</code>)</li>
         </ul>
-
+        
         <h3><strong>3) Where data goes (recipients)</strong></h3>
-        <p>The AI Reading Guide is processed through the following path:</p>
+        <p>The Page Reading Guide (AI summary) is processed through the following path:</p>
         <ul>
           <li>The Extension → our API (e.g., Vercel Serverless Function) → <strong>Anthropic</strong> (Claude) → our API → the Extension</li>
         </ul>
-
+        
         <h3><strong>4) Storage/retention (how long)</strong></h3>
         <ul>
           <li>
@@ -119,18 +115,17 @@
           </li>
           <li>The Extension does <strong>not</strong> permanently store AI responses (disk/cloud).</li>
         </ul>
-
+        
         <h3><strong>5) What we do not collect</strong></h3>
         <ul>
           <li>The Extension does not request your <strong>name, email, or account information</strong>.</li>
-          <li>The Extension does not “always/send everything” from a page. Only limited text that meets the conditions above is sent.</li>
+          <li>The Extension does not “always/send everything” from a page. Only limited extracted text needed for the enabled feature is sent under the conditions described above.</li>
         </ul>
-
+        
         <h3><strong>6) User choices (controls)</strong></h3>
         <p>You can turn off the following in settings:</p>
         <ul>
-          <li><strong>AI Reading Guide for long text</strong></li>
-          <li><strong>AI Reading Guide for tables</strong></li>
+          <li><strong>Page Reading Guide (AI summary)</strong></li>
         </ul>
 
         <h3><strong>7) Contact</strong></h3>

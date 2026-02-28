@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EUR to KRW — About · Privacy</title>
+    <meta name="description" content="EUR to KRW Chrome extension — About and Privacy Policy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .md { max-width: 860px; margin: 0 auto; }
+      .md h1, .md h2, .md h3 { margin-top: 24px; }
+      .md a { color: var(--brand); }
+      .backbar { border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2); }
+      .backbar-inner { height: 48px; display: flex; align-items: center; gap: 10px; }
+      .backbtn { color: var(--muted); text-decoration: none; }
+      .backbtn:hover { color: var(--text); }
+      .apphead { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); }
+      .apphead-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 0; }
+      .apphead-left { display: flex; align-items: center; gap: 12px; }
+      .apphead-icon { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; background: #0b0c10; }
+      .apphead-title { margin: 0; font-size: 20px; }
+      .pill { display: inline-flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+      .pill .btn { margin-left: 0; }
+      .callout { margin: 14px 0 18px; padding: 12px; border: 1px dashed var(--border); border-radius: 10px; background: rgba(255,255,255,0.03); color: var(--muted); }
+      .muted { color: var(--muted); }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+      table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+      th, td { text-align: left; padding: 8px 12px; border: 1px solid var(--border); font-size: 0.9rem; }
+      th { background: rgba(255,255,255,0.04); }
+    </style>
+  </head>
+  <body>
+    <div class="backbar">
+      <div class="container backbar-inner">
+        <a class="backbtn" href="./index.html">← Back</a>
+      </div>
+    </div>
+
+    <div class="apphead">
+      <div class="container apphead-inner">
+        <div class="apphead-left">
+          <img class="apphead-icon" src="./assets/eur-to-krw-icon.png" alt="EUR to KRW icon" />
+          <div>
+            <h1 class="apphead-title">EUR to KRW</h1>
+            <div class="badges">
+              <span class="badge">Chrome Extension</span>
+            </div>
+          </div>
+        </div>
+        <div class="pill">
+          <a class="btn primary" href="#" target="_blank" rel="noreferrer">Chrome Web Store</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <article class="md">
+        <h1><strong>About EUR to KRW</strong></h1>
+        <p><strong>EUR to KRW</strong> automatically detects Euro (€) amounts on any webpage and displays the Korean Won equivalent as a subtle tooltip right next to the original value. No copy-pasting, no switching tabs, no mental math.</p>
+
+        <h2><strong>How it works</strong></h2>
+        <p>Whenever you visit a page containing Euro amounts — whether it's a business report, a Google Slides deck, a Confluence wiki, or any website — the extension quietly scans the content and overlays lightweight KRW tooltips. The exchange rate is fetched from a live API and cached for 24 hours, so conversions are always up to date without slowing down your browsing.</p>
+
+        <h2><strong>Key features</strong></h2>
+        <ul>
+          <li><strong>Live exchange rates</strong> — updated daily via open.er-api.com (with automatic fallback)</li>
+          <li><strong>Works across all websites</strong> — general web, Google Docs, Slides, Confluence, and more</li>
+          <li><strong>Smart tooltip positioning</strong> — tooltips appear above or below the source text without blocking content</li>
+          <li><strong>Zero DOM modification</strong> — original page content is never altered</li>
+          <li><strong>Instant on/off toggle</strong> — disable conversions with a single click from the popup</li>
+          <li><strong>Manual rate refresh</strong> — force a rate update anytime from the extension popup</li>
+          <li><strong>Fully offline-aware</strong> — uses cached rate when network is unavailable</li>
+        </ul>
+
+        <h2><strong>Supported formats</strong></h2>
+        <p><code>€1,200</code> · <code>€6m</code> · <code>EUR 2.5M</code> · <code>6 EUR</code> · <code>유로</code></p>
+
+        <div class="callout">
+          <div><strong>Privacy first</strong> — No user data is collected, stored externally, or transmitted.</div>
+          <div class="muted">The extension only fetches publicly available exchange rate data. See the Privacy Policy below for full details.</div>
+        </div>
+
+        <hr />
+
+        <h2><strong>Privacy Policy</strong></h2>
+        <p class="muted">Effective date: 2026-03-01</p>
+        <p>This document explains what information the Chrome extension <strong>EUR to KRW</strong> ("the Extension") accesses, what it does with that information, and what it does not do.</p>
+
+        <h3><strong>1) Data we do not collect</strong></h3>
+        <p>The Extension does <strong>not</strong> collect, transmit, sell, or share any personally identifiable information. Specifically, it does not collect:</p>
+        <ul>
+          <li>Your name, email address, or any account information</li>
+          <li>Your browsing history or the URLs of pages you visit</li>
+          <li>The content of webpages you visit (beyond scanning for currency patterns locally in your browser)</li>
+          <li>Location data</li>
+          <li>Any form of analytics or usage telemetry</li>
+        </ul>
+
+        <h3><strong>2) Data stored locally</strong></h3>
+        <p>The Extension stores the following data in your browser's local storage (<code>chrome.storage.local</code>), which remains on your device only and is never transmitted externally:</p>
+        <table>
+          <thead>
+            <tr><th>Data</th><th>Purpose</th><th>Retention</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Exchange rate (EUR/KRW)</td><td>Display KRW conversions</td><td>Refreshed every 24 hours</td></tr>
+            <tr><td>Rate date</td><td>Show the date of the last rate update</td><td>Refreshed with the rate</td></tr>
+            <tr><td>Enabled/disabled state</td><td>Remember your on/off preference</td><td>Until you change it</td></tr>
+          </tbody>
+        </table>
+
+        <h3><strong>3) Third-party services</strong></h3>
+        <p>The Extension makes outbound HTTPS requests solely to fetch publicly available exchange rate data. No user data is included in these requests.</p>
+        <ul>
+          <li><strong>Primary source:</strong> <a href="https://www.exchangerate-api.com" target="_blank" rel="noreferrer">open.er-api.com</a> — <code>GET https://open.er-api.com/v6/latest/EUR</code></li>
+          <li><strong>Fallback source:</strong> <a href="https://www.jsdelivr.com" target="_blank" rel="noreferrer">cdn.jsdelivr.net</a> (Fawaz Ahmed Currency API) — used only if the primary source fails</li>
+        </ul>
+        <p class="muted">These services may log standard HTTP request metadata (e.g., IP address, timestamp) per their own privacy policies. The Extension has no control over or access to those logs.</p>
+
+        <h3><strong>4) Permissions explained</strong></h3>
+        <table>
+          <thead>
+            <tr><th>Permission</th><th>Reason</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>storage</code></td><td>Save exchange rate cache and on/off setting locally</td></tr>
+            <tr><td><code>activeTab</code></td><td>Send messages to the active tab when you change settings in the popup</td></tr>
+            <tr><td>host permissions (er-api.com, jsdelivr.net)</td><td>Fetch live exchange rate data</td></tr>
+            <tr><td>Content script on all URLs</td><td>Scan page text for Euro amounts and display tooltips</td></tr>
+          </tbody>
+        </table>
+
+        <h3><strong>5) Children's privacy</strong></h3>
+        <p>The Extension does not knowingly collect any information from children under the age of 13, as it collects no personal information from any user.</p>
+
+        <h3><strong>6) Changes to this policy</strong></h3>
+        <p>If this Privacy Policy is updated, the new version will be published at the same URL with an updated effective date.</p>
+
+        <h3><strong>7) Contact</strong></h3>
+        <p>For questions or concerns about this Privacy Policy, please open an issue at:</p>
+        <p><strong><a href="https://github.com/telostory/auto-currency-converter/issues" target="_blank" rel="noreferrer">github.com/telostory/auto-currency-converter/issues</a></strong></p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> telosoft</div>
+        <div class="nav"><a class="nav-link" href="https://github.com/telostory" target="_blank" rel="noreferrer">GitHub</a></div>
+      </div>
+    </footer>
+    <script>
+      const yEl = document.getElementById('year');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

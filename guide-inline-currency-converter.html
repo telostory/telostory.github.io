@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EUR to KRW — About · Privacy</title>
-    <meta name="description" content="EUR to KRW Chrome extension — About and Privacy Policy" />
+    <title>Inline Currency Converter — About · Privacy</title>
+    <meta name="description" content="Inline Currency Converter Chrome extension — About and Privacy Policy" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
@@ -42,9 +42,9 @@
     <div class="apphead">
       <div class="container apphead-inner">
         <div class="apphead-left">
-          <img class="apphead-icon" src="./assets/eur-to-krw-icon.png" alt="EUR to KRW icon" />
+          <img class="apphead-icon" src="./assets/inline-currency-converter-icon.png" alt="Inline Currency Converter icon" />
           <div>
-            <h1 class="apphead-title">EUR to KRW</h1>
+            <h1 class="apphead-title">Inline Currency Converter</h1>
             <div class="badges">
               <span class="badge">Chrome Extension</span>
             </div>
@@ -58,25 +58,26 @@
 
     <main class="container">
       <article class="md">
-        <h1><strong>About EUR to KRW</strong></h1>
-        <p><strong>EUR to KRW</strong> automatically detects Euro (€) amounts on any webpage and displays the Korean Won equivalent as a subtle tooltip right next to the original value. No copy-pasting, no switching tabs, no mental math.</p>
+        <h1><strong>About Inline Currency Converter</strong></h1>
+        <p><strong>Inline Currency Converter</strong> automatically detects major currency amounts on any webpage and displays the converted equivalent as a subtle tooltip right next to the original value. No copy-pasting, no switching tabs, no mental math.</p>
 
         <h2><strong>How it works</strong></h2>
-        <p>Whenever you visit a page containing Euro amounts — whether it's a business report, a Google Slides deck, a Confluence wiki, or any website — the extension quietly scans the content and overlays lightweight KRW tooltips. The exchange rate is fetched from a live API and cached for 24 hours, so conversions are always up to date without slowing down your browsing.</p>
+        <p>Whenever you visit a page containing currency amounts — whether it's a business report, a Google Slides deck, a Confluence wiki, or any website — the extension quietly scans the content and overlays lightweight conversion tooltips. Choose your source and target currency from the popup, and all detected amounts update instantly. The exchange rate is fetched from a live API and cached for 24 hours, so conversions are always up to date without slowing down your browsing.</p>
 
         <h2><strong>Key features</strong></h2>
         <ul>
+          <li><strong>Multi-currency conversion</strong> — switch between supported currencies (incl. EUR, USD, JPY, KRW) in either direction</li>
           <li><strong>Live exchange rates</strong> — updated daily via open.er-api.com (with automatic fallback)</li>
           <li><strong>Works across all websites</strong> — general web, Google Docs, Slides, Confluence, and more</li>
           <li><strong>Smart tooltip positioning</strong> — tooltips appear above or below the source text without blocking content</li>
           <li><strong>Zero DOM modification</strong> — original page content is never altered</li>
           <li><strong>Instant on/off toggle</strong> — disable conversions with a single click from the popup</li>
-          <li><strong>Manual rate refresh</strong> — force a rate update anytime from the extension popup</li>
+          <li><strong>One-tap currency swap</strong> — flip source and target with the ⇄ button</li>
           <li><strong>Fully offline-aware</strong> — uses cached rate when network is unavailable</li>
         </ul>
 
         <h2><strong>Supported formats</strong></h2>
-        <p>The extension recognizes Euro amounts written in a wide variety of formats. It handles the <strong>€ symbol</strong>, the <strong>EUR abbreviation</strong>, and the <strong>Korean word 유로</strong> — whether the currency indicator appears before or after the number. Common numeric shorthand for <strong>thousands, millions, and billions</strong> in both English and European notations is also supported, so amounts like "€6m" or "EUR 2.5M" are converted just as naturally as plain figures.</p>
+        <p>The extension recognizes currency amounts written in a wide variety of formats. It handles standard symbols (€, $, ¥), currency codes (EUR, USD, JPY, KRW), and localized representations — whether the currency indicator appears before or after the number. Common numeric shorthand for <strong>thousands, millions, and billions</strong> is also supported, so amounts are converted naturally regardless of how they are written on the page.</p>
 
         <div class="callout">
           <div><strong>Privacy first</strong> — No user data is collected, stored externally, or transmitted.</div>
@@ -87,7 +88,7 @@
 
         <h2><strong>Privacy Policy</strong></h2>
         <p class="muted">Effective date: 2026-03-01</p>
-        <p>This document explains what information the Chrome extension <strong>EUR to KRW</strong> ("the Extension") accesses, what it does with that information, and what it does not do.</p>
+        <p>This document explains what information the Chrome extension <strong>Inline Currency Converter</strong> ("the Extension") accesses, what it does with that information, and what it does not do.</p>
 
         <h3><strong>1) Data we do not collect</strong></h3>
         <p>The Extension does <strong>not</strong> collect, transmit, sell, or share any personally identifiable information. Specifically, it does not collect:</p>
@@ -106,7 +107,7 @@
             <tr><th>Data</th><th>Purpose</th><th>Retention</th></tr>
           </thead>
           <tbody>
-            <tr><td>Exchange rate (EUR/KRW)</td><td>Display KRW conversions</td><td>Refreshed every 24 hours</td></tr>
+            <tr><td>Exchange rates for supported currencies</td><td>Display currency conversions</td><td>Refreshed every 24 hours</td></tr>
             <tr><td>Rate date</td><td>Show the date of the last rate update</td><td>Refreshed with the rate</td></tr>
             <tr><td>Enabled/disabled state</td><td>Remember your on/off preference</td><td>Until you change it</td></tr>
           </tbody>
@@ -115,7 +116,7 @@
         <h3><strong>3) Third-party services</strong></h3>
         <p>The Extension makes outbound HTTPS requests solely to fetch publicly available exchange rate data. No user data is included in these requests.</p>
         <ul>
-          <li><strong>Primary source:</strong> <a href="https://www.exchangerate-api.com" target="_blank" rel="noreferrer">open.er-api.com</a> — <code>GET https://open.er-api.com/v6/latest/EUR</code></li>
+          <li><strong>Primary source:</strong> <a href="https://www.exchangerate-api.com" target="_blank" rel="noreferrer">open.er-api.com</a> — anonymous public API call, no user data sent</li>
           <li><strong>Fallback source:</strong> <a href="https://www.jsdelivr.com" target="_blank" rel="noreferrer">cdn.jsdelivr.net</a> (Fawaz Ahmed Currency API) — used only if the primary source fails</li>
         </ul>
         <p class="muted">These services may log standard HTTP request metadata (e.g., IP address, timestamp) per their own privacy policies. The Extension has no control over or access to those logs.</p>
@@ -129,7 +130,7 @@
             <tr><td><code>storage</code></td><td>Save exchange rate cache and on/off setting locally</td></tr>
             <tr><td><code>activeTab</code></td><td>Send messages to the active tab when you change settings in the popup</td></tr>
             <tr><td>host permissions (er-api.com, jsdelivr.net)</td><td>Fetch live exchange rate data</td></tr>
-            <tr><td>Content script on all URLs</td><td>Scan page text for Euro amounts and display tooltips</td></tr>
+            <tr><td>Content script on all URLs</td><td>Scan page text for currency amounts and display tooltips</td></tr>
           </tbody>
         </table>
 
@@ -137,7 +138,7 @@
         <p>The Extension does not knowingly collect any information from children under the age of 13, as it collects no personal information from any user.</p>
 
         <h3><strong>6) Changes to this policy</strong></h3>
-        <p>If this Privacy Policy is updated, the new version will be published at the same URL with an updated effective date.</p>
+        <p>If this Privacy Policy is updated, the new version will be published at the same URL with an updated effective date. Continued use of the Extension after any changes constitutes acceptance of the updated policy.</p>
 
         <h3><strong>7) Contact</strong></h3>
         <p>For questions or concerns about this Privacy Policy, please open an issue at:</p>

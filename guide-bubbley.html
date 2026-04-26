@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bubbley — About · Privacy</title>
+    <meta name="description" content="Bubbley iOS app — Real-time meeting health analysis. About and Privacy Policy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .md { max-width: 860px; margin: 0 auto; }
+      .md h1, .md h2, .md h3 { margin-top: 24px; }
+      .md a { color: var(--brand); }
+      .backbar { border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2); }
+      .backbar-inner { height: 48px; display: flex; align-items: center; gap: 10px; }
+      .backbtn { color: var(--muted); text-decoration: none; }
+      .backbtn:hover { color: var(--text); }
+      .apphead { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); }
+      .apphead-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 0; }
+      .apphead-left { display: flex; align-items: center; gap: 12px; }
+      .apphead-icon { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; background: #0b0c10; }
+      .apphead-title { margin: 0; font-size: 20px; }
+      .pill { display: inline-flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+      .pill .btn { margin-left: 0; }
+      .callout { margin: 14px 0 18px; padding: 12px; border: 1px dashed var(--border); border-radius: 10px; background: rgba(255,255,255,0.03); color: var(--muted); }
+      .muted { color: var(--muted); }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+      table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+      th, td { text-align: left; padding: 8px 12px; border: 1px solid var(--border); font-size: 0.9rem; }
+      th { background: rgba(255,255,255,0.04); }
+    </style>
+  </head>
+  <body>
+    <div class="backbar">
+      <div class="container backbar-inner">
+        <a class="backbtn" href="./index.html">← Back</a>
+      </div>
+    </div>
+
+    <div class="apphead">
+      <div class="container apphead-inner">
+        <div class="apphead-left">
+          <img class="apphead-icon" src="./assets/bubbley-icon.png" alt="Bubbley icon" />
+          <div>
+            <h1 class="apphead-title">Bubbley</h1>
+            <div class="badges">
+              <span class="badge">iPhone</span>
+              <span class="badge">iPad</span>
+            </div>
+          </div>
+        </div>
+        <div class="pill">
+          <a class="btn primary" href="https://apps.apple.com" target="_blank" rel="noreferrer">App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <article class="md">
+        <h1><strong>About Bubbley</strong></h1>
+        <p><strong>Bubbley</strong> analyzes meeting audio in real-time to reveal how well your team is sharing the conversation. Place your iPhone on the table, and watch as the app tracks speaking time, turn-taking balance, and meeting health — all instantly, all locally.</p>
+
+        <h2><strong>The problem</strong></h2>
+        <p>In meetings, some voices dominate while others fade into silence. You might not realize it until afterward, and by then the moment has passed. Hybrid meetings are even harder to read — remote participants on Zoom sound like one anonymous voice. Traditional meeting notes don't capture participation patterns.</p>
+
+        <h2><strong>How Bubbley works</strong></h2>
+        <p>Bubbley uses on-device machine learning to listen to meeting audio and extract three key insights:</p>
+        <ul>
+          <li><strong>Speaking time</strong> — How long each participant spoke (in seconds and percentages)</li>
+          <li><strong>Turn-taking balance</strong> — How well the group shares speaking turns (higher scores mean more balanced, natural back-and-forth)</li>
+          <li><strong>Meeting health score</strong> — A composite measure of participation equity and conversation flow</li>
+        </ul>
+
+        <h2><strong>Key features</strong></h2>
+        <ul>
+          <li><strong>Real-time analysis</strong> — Watch the metrics update as the meeting unfolds</li>
+          <li><strong>Participant detection</strong> — Automatically identifies distinct speakers (both in-person and remote)</li>
+          <li><strong>Turn-taking breakdown</strong> — See how many times each person spoke and how the conversation flowed</li>
+          <li><strong>Session recording</strong> — Save meeting summaries for later review and team debrief</li>
+          <li><strong>Zero cloud dependency</strong> — All analysis happens on your device. Audio is never uploaded.</li>
+          <li><strong>Works with hybrid meetings</strong> — Captures both in-person voices and remote participants playing through your speaker</li>
+          <li><strong>Simple, distraction-free UI</strong> — All the insights you need without unnecessary complexity</li>
+        </ul>
+
+        <h2><strong>How to use</strong></h2>
+        <ol>
+          <li>Open Bubbley and tap <strong>Start Meeting</strong></li>
+          <li>Place your iPhone on the table in the middle of the conference room (or anywhere you can hear all speakers clearly)</li>
+          <li>For remote participants, play audio through your Mac/laptop speaker (not headphones) so your iPhone's mic picks it up</li>
+          <li>Start your meeting — Bubbley will begin analyzing in the background</li>
+          <li>After the meeting ends, tap <strong>Stop</strong> to see the full analysis</li>
+          <li>Review speaking time, turn-taking balance, and overall meeting health</li>
+          <li>Optionally save the session for future reference or team discussion</li>
+        </ol>
+
+        <h2><strong>Who should use Bubbley?</strong></h2>
+        <ul>
+          <li><strong>Meeting facilitators</strong> — Ensure all voices are heard and balanced</li>
+          <li><strong>Team leads</strong> — Identify participation patterns and psychological safety issues</li>
+          <li><strong>DEI advocates</strong> — Measure and improve equitable speaking time</li>
+          <li><strong>Research teams</strong> — Study conversational dynamics and group behavior</li>
+          <li><strong>Anyone who wants better meetings</strong> — Get objective data on what actually happened</li>
+        </ul>
+
+        <div class="callout">
+          <div><strong>Privacy by design</strong> — Your audio never leaves your device. All processing happens locally on your iPhone.</div>
+          <div class="muted">We use on-device machine learning to extract only the metrics you see. Raw audio is not stored, transcribed, or uploaded.</div>
+        </div>
+
+        <hr />
+
+        <h2><strong>Privacy Policy</strong></h2>
+        <p class="muted">Effective date: 2026-04-26</p>
+        <p>This document explains what information the iOS app <strong>Bubbley</strong> ("the App") accesses, what it does with that information, and what it does not do.</p>
+
+        <h3><strong>1) Audio processing — local only</strong></h3>
+        <p>The App uses your iPhone's microphone to listen to meeting audio. <strong>All audio processing happens on your device using on-device machine learning models. The raw audio is never transmitted, uploaded, or stored on external servers.</strong></p>
+        <p>The App extracts only the following metrics from audio:</p>
+        <ul>
+          <li>Speaking time per participant (in seconds)</li>
+          <li>Number of speaking turns</li>
+          <li>Turn-taking balance scores</li>
+          <li>Overall meeting health metrics</li>
+        </ul>
+        <p>These derived metrics are what you see in the app. The original audio is not retained after analysis is complete.</p>
+
+        <h3><strong>2) Data you explicitly save</strong></h3>
+        <p>When you end a meeting analysis, the App offers to <strong>optionally save</strong> the session summary to your device. This summary includes:</p>
+        <ul>
+          <li>Session date and duration</li>
+          <li>List of detected speakers (no identifying information beyond "Speaker 1, Speaker 2", etc.)</li>
+          <li>Speaking time for each speaker</li>
+          <li>Meeting health metrics</li>
+        </ul>
+        <p>This data is stored <strong>locally on your device only</strong> in the app's sandbox. It is never transmitted externally unless you explicitly export or share it.</p>
+
+        <h3><strong>3) Data we do not collect</strong></h3>
+        <p>The App does <strong>not</strong> collect, transmit, sell, or share any of the following:</p>
+        <ul>
+          <li>Personal identifiable information (name, email, phone, etc.)</li>
+          <li>Meeting content or transcripts</li>
+          <li>Raw audio files</li>
+          <li>Calendar or contact data</li>
+          <li>Analytics or usage telemetry</li>
+          <li>Advertising tracking data</li>
+        </ul>
+
+        <h3><strong>4) Permissions explained</strong></h3>
+        <table>
+          <thead>
+            <tr><th>Permission</th><th>Reason</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>NSMicrophoneUsageDescription</code></td><td>Record meeting audio for on-device analysis</td></tr>
+          </tbody>
+        </table>
+        <p>No other permissions are requested or used.</p>
+
+        <h3><strong>5) Machine learning models</strong></h3>
+        <p>The App uses two on-device machine learning models:</p>
+        <ul>
+          <li><strong>LS-EEND (Local Speaker Extraction and End-to-End Diarization)</strong> — Identifies distinct speakers from audio</li>
+          <li><strong>Silero VAD (Voice Activity Detection)</strong> — Detects speech vs. silence to identify turn boundaries</li>
+        </ul>
+        <p>Both models run entirely on your device and do not transmit audio or data externally. The models are bundled with the app and are not updated or communicated with external services.</p>
+
+        <h3><strong>6) No third-party services</strong></h3>
+        <p>The App does not send audio, metrics, or any other data to third-party services, analytics providers, or cloud platforms. There are no external API calls related to your meeting data or audio processing.</p>
+
+        <h3><strong>7) Microphone access</strong></h3>
+        <p>The App requires microphone access to function. You can revoke this permission at any time in <strong>Settings > Privacy > Microphone</strong>. Once revoked, the app will not work until you grant it again.</p>
+
+        <h3><strong>8) Data retention on your device</strong></h3>
+        <p>Session summaries are stored on your iPhone until <strong>you delete them</strong>. You can delete any saved session directly from the app. If you uninstall the app, all locally stored data is automatically deleted by iOS.</p>
+
+        <h3><strong>9) Exporting or sharing sessions</strong></h3>
+        <p>If you choose to export or share a session summary (e.g., email a PDF to your team), you are responsible for that sharing decision. The App does not force or automatically export any data.</p>
+
+        <h3><strong>10) Children's privacy</strong></h3>
+        <p>The App is not directed toward children under 13. As the App collects no personal information and only processes audio locally, it does not knowingly collect any data from children.</p>
+
+        <h3><strong>11) Changes to this policy</strong></h3>
+        <p>If this Privacy Policy is updated, the new version will be published in the App Store release notes with an updated effective date. Continued use of the App after any changes constitutes acceptance of the updated policy.</p>
+
+        <h3><strong>12) Contact</strong></h3>
+        <p>For questions or concerns about this Privacy Policy, please open an issue at:</p>
+        <p><strong><a href="https://github.com/telostory/meeting-health-checker-ios/issues" target="_blank" rel="noreferrer">github.com/telostory/meeting-health-checker-ios/issues</a></strong></p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> telosoft</div>
+        <div class="nav"><a class="nav-link" href="https://github.com/telostory" target="_blank" rel="noreferrer">GitHub</a></div>
+      </div>
+    </footer>
+    <script>
+      const yEl = document.getElementById('year');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

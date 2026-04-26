@@ -1,0 +1,42 @@
+[
+  {
+    "id": "focus-reader",
+    "name": "Focus Reader for ADHD",
+    "icon": "assets/focus-reader-icon.png",
+    "platforms": ["Chrome Extension"],
+    "description": "Read long web pages in focused, section-by-section steps. Optional AI reading guide with clear privacy disclosure.",
+    "storeName": "Chrome Web Store",
+    "storeUrl": "https://chromewebstore.google.com/detail/focus-reader-for-adhd/lnccppnmdefghfigickjohdmhdgkcilh",
+    "guideUrl": "guide-focus-reader.html"
+  },
+  {
+    "id": "inline-currency-converter",
+    "name": "Inline Currency Converter",
+    "icon": "assets/inline-currency-converter-icon.png",
+    "platforms": ["Chrome Extension"],
+    "description": "Instantly see currency amounts (EUR, USD, JPY, KRW and more) converted to your chosen currency as tooltips — live rates, no clicks needed.",
+    "storeName": "Chrome Web Store",
+    "storeUrl": "https://chromewebstore.google.com/detail/eur-to-krw/adnmlkeiggdkdbnhaokdjneganjmbkhk?authuser=0&hl=ko",
+    "guideUrl": "guide-inline-currency-converter.html"
+  },
+  {
+    "id": "shadowing-master",
+    "name": "Shadowing Master",
+    "icon": "assets/shadowing-mastger-icon.png",
+    "platforms": ["iPhone", "iPad"],
+    "description": "The ultimate shadowing practice app for language learning. Combines source audio and your voice into a single file for easy submission.",
+    "storeName": "App Store",
+    "storeUrl": "https://apps.apple.com/kr/app/%EC%89%90%EB%8F%84%EC%9E%89%EB%A7%88%EC%8A%A4%ED%84%B0/id6751806807",
+    "guideUrl": "guide-shadowing-master.html"
+  },
+  {
+    "id": "bubbley",
+    "name": "Bubbley",
+    "icon": "assets/bubbley-icon.png",
+    "platforms": ["iPhone"],
+    "description": "Real-time meeting health analysis. Tracks speaking time, turn-taking balance, and participation equity — all processed locally on your device.",
+    "storeName": "App Store",
+    "storeUrl": "https://apps.apple.com",
+    "guideUrl": "guide-bubbley.html"
+  }
+]

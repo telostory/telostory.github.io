@@ -22,72 +22,7 @@
       </section>
       <section class="projects">
         <div class="container">
-          <div class="cards">
-            <article class="card">
-              <div class="card-media">
-                <img src="./assets/focus-reader-icon.png" alt="Focus Reader icon" class="card-media-img" loading="lazy" />
-              </div>
-              <div class="card-body">
-                <div class="card-head">
-                  <h3 class="card-title">Focus Reader for ADHD</h3>
-                  <div class="badges" role="list"><span class="badge" role="listitem">Chrome Extension</span></div>
-                </div>
-                <p class="card-desc">Read long web pages in focused, section-by-section steps. Optional AI reading guide with clear privacy disclosure.</p>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://chromewebstore.google.com/detail/focus-reader-for-adhd/lnccppnmdefghfigickjohdmhdgkcilh" target="_blank" rel="noreferrer">Chrome Web Store</a>
-                  <a class="btn secondary" href="./guide-focus-reader.html">About</a>
-                </div>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-media">
-                <img src="./assets/inline-currency-converter-icon.png" alt="Inline Currency Converter icon" class="card-media-img" loading="lazy" />
-              </div>
-              <div class="card-body">
-                <div class="card-head">
-                  <h3 class="card-title">Inline Currency Converter</h3>
-                  <div class="badges" role="list"><span class="badge" role="listitem">Chrome Extension</span></div>
-                </div>
-                <p class="card-desc">Instantly see currency amounts (EUR, USD, JPY, KRW and more) converted to your chosen currency as tooltips — live rates, no clicks needed.</p>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://chromewebstore.google.com/detail/eur-to-krw/adnmlkeiggdkdbnhaokdjneganjmbkhk?authuser=0&hl=ko" target="_blank" rel="noreferrer">Chrome Web Store</a>
-                  <a class="btn secondary" href="./guide-inline-currency-converter.html">About</a>
-                </div>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-media">
-                <img src="./assets/shadowing-mastger-icon.png" alt="Shadowing Master icon" class="card-media-img" loading="lazy" />
-              </div>
-              <div class="card-body">
-                <div class="card-head">
-                  <h3 class="card-title">Shadowing Master</h3>
-                  <div class="badges" role="list"><span class="badge" role="listitem">iPhone</span><span class="badge" role="listitem">iPad</span></div>
-                </div>
-                <p class="card-desc">The ultimate shadowing practice app for language learning. Combines source audio and your voice into a single file for easy submission.</p>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://apps.apple.com/kr/app/%EC%89%90%EB%8F%84%EC%9E%89%EB%A7%88%EC%8A%A4%ED%84%B0/id6751806807" target="_blank" rel="noreferrer">App Store</a>
-                  <a class="btn secondary" href="./guide-shadowing-master.html">About</a>
-                </div>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-media">
-                <img src="./assets/bubbley-icon.png" alt="Bubbley icon" class="card-media-img" loading="lazy" />
-              </div>
-              <div class="card-body">
-                <div class="card-head">
-                  <h3 class="card-title">Bubbley</h3>
-                  <div class="badges" role="list"><span class="badge" role="listitem">iPhone</span></div>
-                </div>
-                <p class="card-desc">Real-time meeting health analysis. Tracks speaking time, turn-taking balance, and participation equity — all processed locally on your device.</p>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://apps.apple.com" target="_blank" rel="noreferrer">App Store</a>
-                  <a class="btn secondary" href="./guide-bubbley.html">About</a>
-                </div>
-              </div>
-            </article>
-          </div>
+          <div class="cards" id="cards-container"></div>
         </div>
       </section>
     </main>
@@ -100,6 +35,41 @@
     <script>
       const yEl = document.getElementById('year');
       if (yEl) yEl.textContent = new Date().getFullYear();
+
+      async function loadApps() {
+        try {
+          const response = await fetch('./apps.json');
+          const apps = await response.json();
+          const container = document.getElementById('cards-container');
+
+          apps.forEach(app => {
+            const badges = app.platforms.map(p => `<span class="badge" role="listitem">${p}</span>`).join('');
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML = `
+              <div class="card-media">
+                <img src="${app.icon}" alt="${app.name} icon" class="card-media-img" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-head">
+                  <h3 class="card-title">${app.name}</h3>
+                  <div class="badges" role="list">${badges}</div>
+                </div>
+                <p class="card-desc">${app.description}</p>
+                <div class="card-actions">
+                  <a class="btn primary" href="${app.storeUrl}" target="_blank" rel="noreferrer">${app.storeName}</a>
+                  <a class="btn secondary" href="./${app.guideUrl}">About</a>
+                </div>
+              </div>
+            `;
+            container.appendChild(card);
+          });
+        } catch (error) {
+          console.error('Failed to load apps:', error);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadApps);
     </script>
   </body>
   </html>

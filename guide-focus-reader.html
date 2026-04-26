@@ -36,24 +36,7 @@
       </div>
     </div>
 
-    <div class="apphead">
-      <div class="container apphead-inner">
-        <div class="apphead-left">
-          <img class="apphead-icon" src="./assets/focus-reader-icon.png" alt="Focus Reader for ADHD icon" />
-          <div>
-            <h1 class="apphead-title">Focus Reader for ADHD</h1>
-            <div class="badges">
-              <span class="badge">Chrome Extension</span>
-            </div>
-          </div>
-        </div>
-        <div class="pill">
-          <a class="btn primary" href="https://chromewebstore.google.com/detail/focus-reader-for-adhd/lnccppnmdefghfigickjohdmhdgkcilh" target="_blank" rel="noreferrer">Chrome Web Store</a>
-          <!-- TODO: 필요 시 프로젝트 소개/소스 링크로 교체 -->
-          <a class="btn secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </div>
-    </div>
+    <div class="apphead" id="apphead"></div>
 
     <main class="container">
       <article class="md">
@@ -142,6 +125,38 @@
     <script>
       const yEl = document.getElementById('year');
       if (yEl) yEl.textContent = new Date().getFullYear();
+
+      async function loadAppHeader() {
+        try {
+          const appId = document.location.pathname.match(/guide-(.+)\.html/)[1];
+          const response = await fetch('./apps.json');
+          const apps = await response.json();
+          const app = apps.find(a => a.id === appId);
+
+          if (app) {
+            const badges = app.platforms.map(p => `<span class="badge">${p}</span>`).join('');
+            const apphead = document.getElementById('apphead');
+            apphead.innerHTML = `
+              <div class="container apphead-inner">
+                <div class="apphead-left">
+                  <img class="apphead-icon" src="${app.icon}" alt="${app.name} icon" />
+                  <div>
+                    <h1 class="apphead-title">${app.name}</h1>
+                    <div class="badges">${badges}</div>
+                  </div>
+                </div>
+                <div class="pill">
+                  <a class="btn primary" href="${app.storeUrl}" target="_blank" rel="noreferrer">${app.storeName}</a>
+                </div>
+              </div>
+            `;
+          }
+        } catch (error) {
+          console.error('Failed to load app header:', error);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadAppHeader);
     </script>
   </body>
 </html>

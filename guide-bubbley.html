@@ -39,23 +39,7 @@
       </div>
     </div>
 
-    <div class="apphead">
-      <div class="container apphead-inner">
-        <div class="apphead-left">
-          <img class="apphead-icon" src="./assets/bubbley-icon.png" alt="Bubbley icon" />
-          <div>
-            <h1 class="apphead-title">Bubbley</h1>
-            <div class="badges">
-              <span class="badge">iPhone</span>
-              <span class="badge">iPad</span>
-            </div>
-          </div>
-        </div>
-        <div class="pill">
-          <a class="btn primary" href="https://apps.apple.com" target="_blank" rel="noreferrer">App Store</a>
-        </div>
-      </div>
-    </div>
+    <div class="apphead" id="apphead"></div>
 
     <main class="container">
       <article class="md">
@@ -123,6 +107,38 @@
     <script>
       const yEl = document.getElementById('year');
       if (yEl) yEl.textContent = new Date().getFullYear();
+
+      async function loadAppHeader() {
+        try {
+          const appId = document.location.pathname.match(/guide-(.+)\.html/)[1];
+          const response = await fetch('./apps.json');
+          const apps = await response.json();
+          const app = apps.find(a => a.id === appId);
+
+          if (app) {
+            const badges = app.platforms.map(p => `<span class="badge">${p}</span>`).join('');
+            const apphead = document.getElementById('apphead');
+            apphead.innerHTML = `
+              <div class="container apphead-inner">
+                <div class="apphead-left">
+                  <img class="apphead-icon" src="${app.icon}" alt="${app.name} icon" />
+                  <div>
+                    <h1 class="apphead-title">${app.name}</h1>
+                    <div class="badges">${badges}</div>
+                  </div>
+                </div>
+                <div class="pill">
+                  <a class="btn primary" href="${app.storeUrl}" target="_blank" rel="noreferrer">${app.storeName}</a>
+                </div>
+              </div>
+            `;
+          }
+        } catch (error) {
+          console.error('Failed to load app header:', error);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadAppHeader);
     </script>
   </body>
 </html>

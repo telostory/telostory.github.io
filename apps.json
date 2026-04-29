@@ -30,13 +30,13 @@
     "guideUrl": "guide-shadowing-master.html"
   },
   {
-    "id": "vlooming",
-    "name": "Vlooming",
-    "icon": "assets/vlooming-icon.png",
+    "id": "vobbly",
+    "name": "Vobbly",
+    "icon": "assets/vobbly-icon.png",
     "platforms": ["iPhone"],
     "description": "Real-time meeting health analysis. Tracks speaking time, turn-taking balance, and participation equity — all processed locally on your device.",
     "storeName": "App Store",
     "storeUrl": "https://apps.apple.com",
-    "guideUrl": "guide-vlooming.html"
+    "guideUrl": "guide-vobbly.html"
   }
 ]
